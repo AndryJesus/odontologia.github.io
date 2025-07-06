@@ -1,0 +1,451 @@
+:root {
+    --color-primario: #007BFF;
+    --color-secundario: #6DD5FA;
+    --color-fondo: #F8F9FA;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: #F8F9FA;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y Navegación */
+.header {
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+img#facebook {
+    height: auto;
+    width: 45px;
+    padding: 10px;
+}
+
+.redes {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-primario);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-primario);
+}
+
+.btn-primario:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+}
+
+.btn-secundario {
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 0;
+    width: 200px;
+    font-weight: 750;
+    transition: 150ms;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+
+/* Hero Section */
+.hero {
+    /*background: url('imagenes/odontologia.jpg'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mapa-content{
+    flex-direction: row;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    background: black;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+}
+
+.hero-content-contenedor{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.hero-content-contenedor h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero-content-contenedor p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+/* Secciones Generales */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+section {
+    padding: 40px 0;
+}
+
+h3{
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: rgb(221, 232, 243);
+}
+
+/* Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.servicio-card {
+    background-color: var(--color-blanco);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.servicio-icon {
+    width: 230px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Nosotros */
+.nosotros {
+    background-color: var(--color-blanco);
+}
+.nosotros-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgb(9, 9, 9);
+    border-radius: 10px;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+}
+
+/* Testimonios */
+.testimonios {
+    text-align: center;
+}
+.slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+}
+.slide p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.slide h4 {
+    font-weight: 600;
+}
+.slider-nav {
+    margin-top: 110px;
+}
+.slider-nav button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+.slider-nav button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Contacto */
+.contacto {
+    background-color: #0085ff;
+    text-align: center;
+}
+
+.contacto-content p {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Simplificado para el ejemplo, se podría implementar un menú hamburguesa */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .nosotros-content {
+        flex-direction: column;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* --- Estilos para el Menú Desplegable de Servicios --- */
+
+/* Contenedor del item 'Servicios' para posicionar el menú */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* El menú desplegable (oculto por defecto) */
+.dropdown-menu {
+    display: none; /* Ocultamos el menú */
+    position: absolute; /* Lo posicionamos relativo al padre (.dropdown) */
+    top: 100%; /* Justo debajo del enlace 'Servicios' */
+    left: 0;
+    background-color: var(--color-blanco);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    list-style: none; /* Quitamos los puntos de la lista */
+    padding: 10px 0;
+    margin-top: 5px; /* Pequeña separación */
+    z-index: 1100; /* Nos aseguramos que esté por encima de otros elementos */
+    min-width: 220px; /* Ancho mínimo del menú */
+}
+
+/* Muestra el menú cuando pasamos el mouse sobre el item 'Servicios' */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para cada enlace dentro del menú desplegable */
+.dropdown-menu li a {
+    display: block; /* Hacemos que el enlace ocupe todo el espacio */
+    padding: 12px 20px;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+}
+
+/* Efecto hover para los enlaces del menú */
+.dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+    color: var(--color-primario);
+}
+
+/* Estilo para la flechita (opcional, pero recomendado) */
+.nav-link a {
+    padding-right: 5px;
+}
