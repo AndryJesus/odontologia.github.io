@@ -71,6 +71,8 @@ body {
     font-size: 1.5rem;
     color: var(--color-primario);
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 img#facebook {
@@ -172,7 +174,7 @@ video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 88%;
+    height: 91%;
     background: black;
     opacity: 0.3;
     mix-blend-mode: overlay;
@@ -189,13 +191,13 @@ video {
 }
 
 .hero-content-contenedor h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 .hero-content-contenedor p {
     font-size: 1.4rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-weight: 300;
 }
 
@@ -314,7 +316,7 @@ h4{
     font-weight: 600;
 }
 .slider-nav {
-    margin-top: 110px;
+    margin-top: 150px;
 }
 .slider-nav button {
     background-color: var(--color-primario);
@@ -448,4 +450,264 @@ h4{
 /* Estilo para la flechita (opcional, pero recomendado) */
 .nav-link a {
     padding-right: 5px;
+}
+
+.mapa-content{
+    width: auto;
+}
+
+/* Importa Google Fonts para una tipografía moderna y limpia */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Un fondo suave */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco limpio para la barra */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil para profundidad */
+    padding: 15px 0;
+    position: sticky; /* Menú pegajoso al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto;
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+.navbar .logo img {
+    height: 50px; /* Tamaño de tu logo */
+    vertical-align: middle;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    position: relative; /* Importante para el dropdown */
+    margin-left: 30px; /* Espacio entre los elementos principales */
+}
+
+.navbar .nav-links li a {
+    color: #555; /* Color del texto de los enlaces */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    display: block; /* Para que el padding funcione bien */
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active { /* Clase active si estás en esa página */
+    color: #007bff; /* Color primario azul para hover */
+}
+
+/* Botón de Cita */
+.navbar .nav-links .btn-cita {
+    background-color: #007bff; /* Azul vibrante */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Sin borde */
+    font-weight: 600; /* Más grueso */
+}
+
+.navbar .nav-links .btn-cita:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* Menú Desplegable */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 220px; /* Ancho mínimo del menú desplegable */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px; /* Bordes redondeados para el desplegable */
+    overflow: hidden; /* Asegura que los bordes redondeados se vean bien */
+    padding: 10px 0; /* Espaciado interno */
+    top: 100%; /* Justo debajo del elemento padre */
+    left: 0; /* Alinear a la izquierda del elemento padre */
+    animation: fadeIn 0.3s ease-out; /* Animación de aparición */
+}
+
+.dropdown-content a {
+    color: #555 !important; /* Sobrescribir el color para los enlaces internos */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 400; /* Más ligero que los enlaces principales */
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0; /* Fondo gris claro al pasar el ratón */
+    color: #007bff !important; /* Color azul al pasar el ratón */
+}
+
+/* Mostrar el menú desplegable al pasar el ratón */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Icono de flecha en el menú desplegable */
+.dropbtn i {
+    margin-left: 8px; /* Espacio entre el texto y el icono */
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropbtn i {
+    transform: rotate(180deg); /* Gira la flecha al abrir el menú */
+}
+
+/* Animación de FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón de menú para móviles (oculto por defecto) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff; /* Color del icono de hamburguesa */
+}
+
+/* ------------------------------------------- */
+/* Media Queries para Responsividad Móvil */
+/* ------------------------------------------- */
+
+@media (max-width: 992px) {
+    .navbar .nav-links {
+        display: none; /* Oculta el menú principal en pantallas pequeñas */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Ajusta según la altura de tu navbar */
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0; /* Espaciado vertical para los enlaces */
+    }
+
+    .navbar .nav-links li a {
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .navbar .nav-links .btn-cita {
+        margin: 20px auto; /* Centrar el botón */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el icono de hamburguesa */
+    }
+
+    /* Ajustes para el dropdown en móvil */
+    .dropdown {
+        width: 100%; /* El dropdown ocupa todo el ancho */
+    }
+
+    .dropdown-content {
+        position: static; /* Cambia a posición estática para que fluya con el contenido */
+        box-shadow: none; /* Sin sombra en móvil */
+        width: 100%;
+        padding: 0;
+        background-color: #f9f9f9; /* Un color ligeramente diferente para el submenú */
+    }
+
+    .dropdown-content a {
+        padding: 10px 30px; /* Ajusta el padding para los enlaces del submenú */
+        font-size: 0.95em;
+    }
+
+    /* Oculta el desplegable en móvil por defecto, JavaScript lo manejará */
+    .dropdown-content {
+        display: none;
+    }
+}
+
+/* Estilos para el contenedor de los enlaces de redes sociales */
+.social-links {
+    display: flex; /* Para que los logos se coloquen uno al lado del otro */
+    justify-content: center; /* Centrar los logos horizontalmente */
+    align-items: center;
+    gap: 20px; /* Espacio entre los logos */
+    margin-top: 30px; /* Espacio por encima si está en un footer */
+    padding-bottom: 30px; /* Espacio por debajo */
+}
+
+.social-links a {
+    display: block; /* Para que el enlace sea un bloque y el padding/margin funcione bien */
+    line-height: 0; /* Elimina espacio extra si hay */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Animación suave para hover */
+}
+
+.social-links img {
+    width: 40px; /* Tamaño de tus logos (ajusta según necesites) */
+    height: 40px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación para el hover */
+    /*filter: grayscale(100%); /* Opcional: logos en escala de grises por defecto */
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+    .social-links img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 10px;
+    }
+    .social-links img {
+        width: 40px;
+        height: 40px;
+    }
 }

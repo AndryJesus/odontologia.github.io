@@ -1,0 +1,74 @@
+/* Estilos específicos para la página de galería */
+
+.gallery-main {
+    padding-top: 40px; /* Espacio superior para que no quede pegado al menú */
+    padding-bottom: 60px; /* Espacio inferior antes del footer */
+    background-color: #f8f9fa; /* Fondo suave */
+}
+
+.gallery-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: -30px; /* Ajuste para acercarlo al título */
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Crea columnas flexibles que se ajustan automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Espacio entre las imágenes */
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen no se salga del borde redondeado */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para posicionar el texto superpuesto */
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    display: block;
+}
+
+.gallery-item .gallery-caption {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}

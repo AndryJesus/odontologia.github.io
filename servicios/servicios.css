@@ -1,0 +1,87 @@
+/* Usamos las variables de color de tu archivo principal */
+:root {
+    --color-primario: #007BFF;
+    --color-fondo-seccion: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: #f8f9fa; /* Un fondo suave para la página */
+}
+
+.contenedor-servicios {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.titulo-servicios {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--color-primario);
+    margin-bottom: 50px;
+}
+
+.servicio-detalle {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--color-fondo-seccion);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--color-sombra);
+    margin-bottom: 50px; /* Espacio entre secciones */
+    scroll-margin-top: 100px; /* Espacio superior al hacer scroll para que no lo tape el menú */
+}
+
+.servicio-detalle:nth-child(odd) {
+    flex-direction: row-reverse; /* Alternar la dirección de la imagen */
+}
+
+.servicio-detalle img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.servicio-info {
+    width: 60%;
+}
+
+.servicio-info h2 {
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.servicio-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* --- Responsividad para móviles --- */
+@media (max-width: 768px) {
+    .servicio-detalle,
+    .servicio-detalle:nth-child(odd) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio-detalle img,
+    .servicio-info {
+        width: 100%;
+    }
+
+    .servicio-detalle {
+        padding: 30px;
+    }
+
+    .titulo-servicios {
+        font-size: 2.2rem;
+    }
+
+    .servicio-info h2 {
+        font-size: 1.8rem;
+    }
+}

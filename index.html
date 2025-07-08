@@ -6,6 +6,7 @@
     <title>Clínica Dental Sonrisa Perfecta | Odontología de Confianza</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -14,41 +15,46 @@
    <img src=".\imagenes\whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
 </a>
 
-    <header class="header">
-        <nav class="nav contenedor">
-            <a href="#" class="logo">Sonrisa Perfecta</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#inicio" class="nav-link">inicio</a></li>
-                <li class="nav-item dropdown"><a href="#servicios" class="nav-link">Servicios &#9662;</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#servicios">Limpieza Dental</a></li>
-                    <li><a href="#servicios">Blanqueamiento Dental</a></li>
-                    <li><a href="#servicios">Ortodoncia</a></li>
-                    <li><a href="#servicios">Implantes Dentales</a></li>
-                    <li><a href="#servicios">Periodoncia</a></li>
-                    <li><a href="#servicios">Cirugía Dental</a></li>
-                </ul>
-                </li>
-                <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
-                <li class="nav-item"><a href="#contacto" class="nav-link">ubicanos</a></li>
-            </ul>
-            <ul class="redes">
-            <img src=".\imagenes\facebook.png" id="facebook">
-            <img src=".\imagenes\instagram.png" id="facebook">
-            <img src=".\imagenes\tik-tok.png" id="facebook">
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="/imagenes/diente-limpio.png">
+            <h5>sonrisa Perfecta</h5>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="/servicios/servios.html" class="dropbtn">Servicios <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="servicios.html#odontologia-general">Odontología General</a>
+                    <a href="servicios.html#estetica-dental">Estética Dental</a>
+                    <a href="servicios.html#implantes-dentales">Implantes Dentales</a>
+                    <a href="servicios.html#ortodoncia">Ortodoncia</a>
+                    <a href="servicios.html#endodoncia">Endodoncia</a>
+                    <a href="servicios.html#periodoncia">Periodoncia</a>
+                    <a href="servicios.html#odontopediatria">Odontopediatría</a>
+                </div>
+            </li>
+            <li><a href="#nosotros">Nuestro Equipo</a></li>
+            <li><a href="/galeria/galeria.html">Galería</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="/login/login.html" class="btn-cita">inicio de sesion</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
 
     <main>
         <section class="hero">
             <div class="hero-content-contenedor">
                 <h1>listo para la mejor consulta odontolofica?</h1>
                 <p>Ofrecemos una odontología moderna y cercana para cuidar de tu salud bucal y la de tu familia.</p>
-                <button type="button" class="btn btn-secundario">contactanos</button>
+                <ul><a href="https://api.whatsapp.com/send?phone=+584127170236&text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cita%20odontol%C3%B3gica." class="btn btn-secundario" target="_blank">contactanos</a></ul>
             </div>
             <video muted autoplay loop>
-                <source src=".\videos\CLÍNICA ODONTOLOGIA.mp4" type="video/mp4">
+                <source src=".\videos\clinica-odontologia.mp4" type="video/mp4">
             </video>
         </section>
         <div class="capa"></div>
@@ -106,15 +112,12 @@
             <div class="slider">
                 <div class="slide active">
                     <p>"¡El mejor trato y profesionalismo que he recibido! Mi sonrisa nunca se ha visto mejor. Recomiendo totalmente a la Clínica Sonrisa Perfecta."</p>
-                    <h4>- María Rodríguez</h4>
                 </div>
                 <div class="slide">
                     <p>"Tenía mucho miedo de ir al dentista, pero el equipo me hizo sentir muy cómodo y seguro. ¡Gracias por devolverme la confianza para sonreír!"</p>
-                    <h4>- Juan Pérez</h4>
                 </div>
                 <div class="slide">
                      <p>"Desde la ortodoncia de mi hijo hasta mis implantes, toda mi familia confía en esta clínica. Son excelentes en lo que hacen."</p>
-                    <h4>- Ana González</h4>
                 </div>
                 <div class="slider-nav">
                     <button class="prev">&lt;</button>
@@ -126,8 +129,8 @@
         <section id="contacto" class="contacto">
             <h3>ubicanos en:</h3>
             <div class="mapa-content">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.4239036736526!2d-66.90607962734035!3d10.602371403410755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5d6e67187eb3%3A0x66f03b269ae6a3e8!2sEstadio%20F%C3%B3rum%20La%20Guaira!5e0!3m2!1ses!2sve!4v1751796076186!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                 <iframe src="https://www.google.com/maps/embed?pb=!4v1751796627817!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ3hqSm1mOHdF!2m2!1d10.60344871381551!2d-66.90471657255674!3f277.3410362243054!4f1.216621112939606!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.4239036736526!2d-66.90607962734035!3d10.602371403410755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5d6e67187eb3%3A0x66f03b269ae6a3e8!2sEstadio%20F%C3%B3rum%20La%20Guaira!5e0!3m2!1ses!2sve!4v1751796076186!5m2!1ses!2sve" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 <iframe src="https://www.google.com/maps/embed?pb=!4v1751796627817!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ3hqSm1mOHdF!2m2!1d10.60344871381551!2d-66.90471657255674!3f277.3410362243054!4f1.216621112939606!5f0.7820865974627469" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -135,11 +138,17 @@
     <footer class="footer">
         <div class="footer-content contenedor">
             <p>&copy; 2025 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.</p>
-             <ul class="redes">
-            <img src=".\imagenes\facebook.png" id="facebook">
-            <img src=".\imagenes\instagram.png" id="facebook">
-            <img src=".\imagenes\tik-tok.png" id="facebook">
-            </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/tu_usuario_instagram/" target="_blank" aria-label="Síguenos en Instagram">
+                    <img src="./imagenes/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@tu_usuario_tiktok" target="_blank" aria-label="Síguenos en TikTok">
+                    <img src="./imagenes/tik-tok.png" alt="TikTok">
+                </a>
+                <a href="https://www.facebook.com/tu_pagina_facebook/" target="_blank" aria-label="Síguenos en Facebook">
+                    <img src=".\imagenes\facebook.png" alt="Facebook">
+                </a>
+            </div>
         </div>
     </footer>
 

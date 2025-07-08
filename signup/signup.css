@@ -1,0 +1,136 @@
+/* Estilos específicos para la página de Registro */
+
+:root {
+  --purplee: #9d15e6;
+  --lightpurplee: #b24fe8;
+  --superlightpurplee: #d396f4;
+  --gray: #55557b;
+  --white: #fff;
+  --black: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background: url('/imagenes/img.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px - 80px); /* Altura de la vista - header - footer */
+    background-color: var(--color-fondo);
+    padding: 40px 0;
+    width: 100%;
+}
+
+.registro-section {
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: solid 1px #414169;
+    height: 700px;
+    backdrop-filter: blur(10px);
+}
+
+.registro-section .section-title {
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.registro-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: var(--color-primario);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.registro-form .btn-primario {
+    width: auto;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: solid 2px black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive para el formulario de registro */
+@media (max-width: 768px) {
+    .main-registro {
+        min-height: calc(100vh - 180px); /* Ajusta si el header/footer mobile son más altos */
+        padding: 20px 0;
+    }
+
+    .registro-section {
+        margin: 0 15px; /* Margen a los lados en pantallas pequeñas */
+        padding: 30px 20px;
+    }
+
+    .registro-section .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .form-group input {
+        padding: 10px 12px;
+    }
+
+    .registro-form .btn-primario {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+.enlace-registro a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 600;
+}
